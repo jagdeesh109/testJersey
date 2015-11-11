@@ -5,7 +5,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <build>
-    <sourceDirectory>src</sourceDirectory>
+    <sourceDirectory>src/com.sc.testjersey/</sourceDirectory>
     <plugins>
       <plugin>
         <artifactId>maven-war-plugin</artifactId>
@@ -28,17 +28,26 @@
     
   </build>
   <dependencies>
-  	<dependency>
-		<groupId>org.glassfish.jersey.core</groupId>
-		<artifactId>jersey-server</artifactId>
-		<version>2.22.1</version>
-	</dependency>
-  	<dependency>
-		<groupId>com.sun.jersey</groupId>
-		<artifactId>jersey-servlet</artifactId>
-		<version>1.19</version>
-	</dependency>
-  	
+  		<dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-server</artifactId>
+            <version>2.22.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-common</artifactId>
+            <version>2.22.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>2.22.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.containers</groupId>
+            <artifactId>jersey-container-servlet</artifactId>
+            <version>2.22.1</version>
+        </dependency>
   	
   </dependencies>
 </project>

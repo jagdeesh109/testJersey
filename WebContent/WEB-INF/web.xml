@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
-  <display-name>com.sc.jersey</display-name>
+  <display-name>testJerey</display-name>
   <welcome-file-list>
   	<welcome-file>readme.html</welcome-file>
     <welcome-file>index.html</welcome-file>
@@ -12,11 +12,19 @@
   </welcome-file-list>
   
   <servlet>
-  	<description>This is the sample desc of servelet </description>
-  	<servlet-name>Jersey rest service</servlet-name>
   	
-  	<servlet-class> </servlet-class>
-  	<load-on-startup>1</load-on-startup>	
+  	<servlet-name>Jersey-rest-service</servlet-name>
+  	 <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>jersey.config.server.provider.packages</param-name>
+            <param-value>com.sc.testjersey</param-value>
+        </init-param>
+   	<load-on-startup>1</load-on-startup>	
   </servlet>
+  <servlet-mapping>
+  	<servlet-name>Jersey-rest-service</servlet-name>
+  	<url-pattern>/api/*</url-pattern>
+  </servlet-mapping>
+  
   
 </web-app>
