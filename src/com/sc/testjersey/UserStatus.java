@@ -5,6 +5,8 @@ import javax.ws.rs.core.MediaType;
 
 @Path("status")
 public class UserStatus {
+	public static final String CLICHED_MESSAGE = "Hello World!";
+	public static final String CLICHED_USERNAME = "Jersey Test";
 	
 	@GET
 	@Produces(MediaType.TEXT_HTML)
@@ -12,5 +14,14 @@ public class UserStatus {
 		
 		return "test jersey";
 	}
+	
+	@GET @Path("uname")
+	@Produces(MediaType.TEXT_HTML)
+	public String userName() {
+		
+		return CLICHED_USERNAME;
+	}
+	
+	
 
 }
