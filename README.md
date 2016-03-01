@@ -9,3 +9,7 @@ This is the second line
 This is third line
 
 This is from branch b1
+
+This is branch b2 
+
+merge to b1
